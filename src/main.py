@@ -1,14 +1,15 @@
 import sys
 from PySide6.QtWidgets import QApplication
-from ui.main_window import PerspectiveCorrectionApp
+from ui.main_window import TransFormApp
 from utils.icon_utils import set_app_icon
 
 def main():
     """Main entry point for the application."""
     app = QApplication(sys.argv)
-    app.setApplicationName("PerspectiveFix")
+    app.setApplicationName("TransForm")
+    app.setStyle("Fusion")  # Fusion respects system colors
     set_app_icon()
-    window = PerspectiveCorrectionApp()
+    window = TransFormApp()
     window.show()
     return app.exec()
 

@@ -9,14 +9,14 @@ from PySide6.QtWidgets import (
 from PySide6.QtCore import Qt, QSize, QMimeData
 from PySide6.QtGui import (
     QImage, QPixmap, QPainter, QColor, QDragEnterEvent, QDropEvent,
-    QAction, QKeySequence, QPen
+    QAction, QKeySequence, QPen, QPalette, QColor
 )
 
 from .about_dialog import AboutDialog
 from utils.icon_utils import load_icon
 from utils.image_utils import load_image, correct_perspective, rotate_image
 
-class PerspectiveCorrectionApp(QMainWindow):
+class TransFormApp(QMainWindow):
     def __init__(self):
         super().__init__()
         self.init_ui()
@@ -46,7 +46,7 @@ class PerspectiveCorrectionApp(QMainWindow):
             }
             QMenuBar::item {
                 background-color: transparent;
-                color: white;
+                color: gray;
                 padding: 5px 10px;
             }
             QMenuBar::item:selected {
@@ -225,7 +225,7 @@ class PerspectiveCorrectionApp(QMainWindow):
         file_menu.addSeparator()
         
         # Add About action
-        about_action = QAction("About PerspectiveFix", self)
+        about_action = QAction("About TransForm", self)
         about_action.triggered.connect(self.show_about_dialog)
         file_menu.addAction(about_action)
         
@@ -360,6 +360,13 @@ class PerspectiveCorrectionApp(QMainWindow):
         self.correct_button.setStyleSheet(button_style)
         toolbar.addWidget(self.correct_button)
 
+
+    def get_adaptive_text_color():
+        """Returns a color suitable for the current system theme"""
+        palette = app.palette()
+        return palette.color(QPalette.WindowText)  # Text color adapts to light/dark mode
+
+
     def setup_dock_widget(self):
         """Set up the left dock widget for coordinates and preview."""
         # Create left dock widget
@@ -419,7 +426,7 @@ class PerspectiveCorrectionApp(QMainWindow):
                 border: none;
                 border-radius: 6px;
                 padding: 1px;
-                color: white;
+                color: {get_adaptive_text_color().name()};
                 font-size: 11px;
                 margin-left: 4px;
             }

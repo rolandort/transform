@@ -64,16 +64,16 @@ The project has been organized into a modular structure:
 
 ```
 transform/
-├── run.py                # Application entry point
-├── src/                  # Source code directory
-│   ├── main.py           # Main application logic
-│   ├── ui/               # User interface components
+├── run.py                   # Application entry point
+├── src/                     # Source code directory
+│   ├── main.py              # Main application logic
+│   ├── ui/                  # User interface components
 │   │   ├── about_dialog.py  # About dialog implementation
 │   │   └── main_window.py   # Main application window
-│   └── utils/            # Utility functions
+│   └── utils/               # Utility functions
 │       ├── icon_utils.py    # Icon loading utilities
 │       └── image_utils.py   # Image processing functions
-├── icons/                # Application icons
+├── icons/                   # Application icons
 └── requirements.txt      # Project dependencies
 ```
 

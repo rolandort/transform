@@ -4,7 +4,7 @@ from PySide6.QtWidgets import QApplication
 
 def set_app_icon():
     """Set the application icon for macOS."""
-    app_icon_path = os.path.join('icons', 'app.icns')
+    app_icon_path = os.path.join('icons', 'app-dark.icns')
     if os.path.exists(app_icon_path):
         app = QApplication.instance()
         app.setWindowIcon(QIcon(app_icon_path))

@@ -1,12 +1,12 @@
 import os
 from PySide6.QtWidgets import QDialog, QLabel, QVBoxLayout
-from PySide6.QtGui import QPixmap
+from PySide6.QtGui import QIcon
 from PySide6.QtCore import Qt
 
 class AboutDialog(QDialog):
     def __init__(self, parent=None):
         super().__init__(parent)
-        self.setWindowTitle("About PerspectiveFix")
+        self.setWindowTitle("About TransForm")
         self.setFixedSize(400, 300)
         
         # Set dialog style
@@ -37,10 +37,11 @@ class AboutDialog(QDialog):
         
         # Add app icon
         icon_label = QLabel()
-        icon_pixmap = QPixmap(os.path.join('icons', 'app.icns')).scaled(
-            64, 64, 
+
+        icon_pixmap = QIcon(os.path.join('icons', 'app-dark.icns')).pixmap(256, 256).scaled(
+            128, 128, 
             Qt.AspectRatioMode.KeepAspectRatio, 
-            Qt.TransformationMode.SmoothTransformation
+            # Qt.TransformationMode.SmoothTransformation
         )
         icon_label.setPixmap(icon_pixmap)
         icon_label.setAlignment(Qt.AlignmentFlag.AlignCenter)

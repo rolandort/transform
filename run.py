@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Simple launcher script for the PerspectiveFix application.
+Simple launcher script for the TransForm application.
 """
 import os
 import sys
