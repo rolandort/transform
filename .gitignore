@@ -34,3 +34,6 @@ wheels/
 .vscode/
 *.swp
 *.swo
+
+# OS files
+.DS_Store
