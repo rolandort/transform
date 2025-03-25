@@ -10,7 +10,7 @@ src_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'src')
 sys.path.insert(0, src_dir)
 
 # Import and run the main application
-from main import main
+from src.main import main
 
 if __name__ == "__main__":
     main()

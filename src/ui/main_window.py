@@ -15,6 +15,7 @@ from PySide6.QtGui import (
 from .about_dialog import AboutDialog
 from utils.icon_utils import load_icon
 from utils.image_utils import load_image, correct_perspective, rotate_image
+from utils.icon_utils import resource_path
 
 class TransFormApp(QMainWindow):
     def __init__(self):
@@ -89,13 +90,13 @@ class TransFormApp(QMainWindow):
 
         # Load icons
         self.icons = {
-            'load': load_icon(os.path.join('icons', 'folder-open.png')),
-            'rotate_ccw': load_icon(os.path.join('icons', 'undo.png')),
-            'rotate_cw': load_icon(os.path.join('icons', 'redo.png')),
-            'correct': load_icon(os.path.join('icons', 'file-export.png')),
-            'zoom_in': load_icon(os.path.join('icons', 'plus.png')),
-            'zoom_reset': load_icon(os.path.join('icons', 'plus-minus.png')),
-            'zoom_out': load_icon(os.path.join('icons', 'minus.png'))
+            'load': load_icon('folder-open.png'),
+            'rotate_ccw': load_icon('undo.png'),
+            'rotate_cw': load_icon('redo.png'),
+            'correct': load_icon('file-export.png'),
+            'zoom_in': load_icon('plus.png'),
+            'zoom_reset': load_icon('plus-minus.png'),
+            'zoom_out': load_icon('minus.png')
         }
 
     def setup_ui_components(self):
@@ -162,7 +163,7 @@ class TransFormApp(QMainWindow):
         
         # Welcome image
         welcome_image = QLabel()
-        welcome_image.setPixmap(QPixmap(os.path.join('icons', 'welcome.png')).scaled(
+        welcome_image.setPixmap(QPixmap(resource_path('icons/welcome.png')).scaled(
             80, 80, Qt.AspectRatioMode.KeepAspectRatio, Qt.TransformationMode.SmoothTransformation))
         welcome_image.setAlignment(Qt.AlignmentFlag.AlignCenter)
         welcome_layout.addWidget(welcome_image)

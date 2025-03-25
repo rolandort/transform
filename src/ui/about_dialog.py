@@ -1,7 +1,7 @@
-import os
 from PySide6.QtWidgets import QDialog, QLabel, QVBoxLayout
 from PySide6.QtGui import QIcon
 from PySide6.QtCore import Qt
+from utils.icon_utils import resource_path
 
 class AboutDialog(QDialog):
     def __init__(self, parent=None):
@@ -38,7 +38,7 @@ class AboutDialog(QDialog):
         # Add app icon
         icon_label = QLabel()
 
-        icon_pixmap = QIcon(os.path.join('icons', 'app-dark.icns')).pixmap(256, 256).scaled(
+        icon_pixmap = QIcon(resource_path('icons/app-light.icns')).pixmap(256, 256).scaled(
             128, 128, 
             Qt.AspectRatioMode.KeepAspectRatio, 
             # Qt.TransformationMode.SmoothTransformation

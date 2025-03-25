@@ -58,6 +58,9 @@ pip install -r requirements.txt
 
 # Run the application
 python run.py
+
+# Compile as macOS app
+pyinstaller run.spec
 ```
 
 ## Project Structure
