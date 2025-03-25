@@ -1,4 +1,6 @@
-# TransForm - Free Transformation and Cropping of Images
+# TransForm - Image Transformation and Cropping
+
+![Icon](icon.png)
 
 A simple macOS desktop application that allows you to apply free transformations and cropping to images by selecting four points.
 
@@ -74,7 +76,7 @@ transform/
 │       ├── icon_utils.py    # Icon loading utilities
 │       └── image_utils.py   # Image processing functions
 ├── icons/                   # Application icons
-└── requirements.txt      # Project dependencies
+└── requirements.txt         # Project dependencies
 ```
 
 ## Usage

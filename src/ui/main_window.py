@@ -26,7 +26,7 @@ class TransFormApp(QMainWindow):
 
     def init_ui(self):
         """Initialize the main UI window."""
-        self.setWindowTitle("TransForm - Free Transformation and Cropping")
+        self.setWindowTitle("TransForm - Image Transformation and Cropping")
         self.setGeometry(100, 100, 1024, 600)
         self.setMinimumSize(600, 400)
         
