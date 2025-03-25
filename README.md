@@ -1,6 +1,6 @@
 # TransForm - Image Transformation and Cropping
 
-![Icon](icon.png)
+![App Icon](images/app-icon.png)
 
 A simple macOS desktop application that allows you to apply free transformations and cropping to images by selecting four points.
 
@@ -36,8 +36,8 @@ A simple macOS desktop application that allows you to apply free transformations
 
 ## Screenshots
 
-![Screenshot](screenshot1.png)
-![Screenshot](screenshot2.png)
+![Screenshot](images/screenshot1.png)
+![Screenshot](images/screenshot2.png)
 
 ## Requirements
 
