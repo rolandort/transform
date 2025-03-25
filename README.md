@@ -60,7 +60,14 @@ pip install -r requirements.txt
 python run.py
 
 # Compile as macOS app
+brew install pyinstaller
+
 pyinstaller run.spec
+
+# Build DMG
+brew install create-dmg
+
+./build-dmg.sh
 ```
 
 ## Project Structure
